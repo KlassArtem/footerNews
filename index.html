@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <title>footerNews</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="header">
+    </header>
+    <main>
+    </main>
+
+    <footer class="footer">
+        <div class="container container--footer">
+            <div class="footer-buttons">
+                <button class="button" type="button" data-modal-open="login-modal">Login</button>
+                <button class="button" type="button" data-modal-open="register-modal">Registration</button>
+            </div>
+
+            <form class="subscription">
+                <h3 class="footer__title">Підпишіться на розсилку</h3>
+                <div class="subscription__wrapper">
+                    <input class="subscription__input" type="email" name="email" id="user_email"
+                        pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                        title="xxxx@xxx.xxx" placeholder="E-mail" />
+                    <button type="submit" class="button button--subscription">
+                        <span>
+                            Підписатися
+                        </span>
+                        <svg class="social-list__icon subscription__icon" width="24" height="24">
+                            <use href="./images/svgs/symbol-defs-telegram.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </footer>
+
+
+    <!-- Login modal -->
+    <div class="backdrop is-hidden" data-modal="login-modal">
+        <div class="modal">
+
+            <button type="button" class="close-btn" data-modal-close>
+                <svg class="modal-close-btn__icon" width="19" height="19">
+                    <use href="./images/svgs/close.svg#icon-close-black-18dp-2-1-1"></use>
+                </svg>
+            </button>
+            <!-- Modal content here -->
+            <form id="login-form" class="contact-form">
+                <h2 class="contact-form__topic">Login</h2>
+
+                <label for="username" class="contact-form__field">
+                    <span class="contact-form__key">Username:</span></label>
+                <input class="contact-form__input" type="text" id="username" name="username" required>
+                <label for="password" class="contact-form__field">
+                    <span class="contact-form__key">Password:</span></label>
+                <input class="contact-form__input" type="password" id="password" name="password" required>
+                <button type="submit" class="button button--form-log">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register modal -->
+    <div class="backdrop is-hidden" data-modal="register-modal">
+        <div class="modal">
+
+            <button type="button" class="close-btn" data-modal-close>
+                <svg class="modal-close-btn__icon" width="19" height="19">
+                    <use href="./images/svgs/close.svg#icon-close-black-18dp-2-1-1"></use>
+                </svg>
+            </button>
+            <!-- Modal content here -->
+            <form id="register-form" class="contact-form">
+                <h2 class="contact-form__topic">Registration</h2>
+
+                <label for="new-username" class="contact-form__field">
+                    <span class="contact-form__key">New username:</span></label>
+
+                <input class="contact-form__input" type="text" id="new-username" name="new-username" required>
+
+                <label for="new-password" class="contact-form__field">
+                    <span class="contact-form__key">New password:</span></label>
+                <input class="contact-form__input" type="password" id="new-password" name="new-password" required>
+                <label for="confirm-password" class="contact-form__field">
+                    <span class="contact-form__key">Confirm password:</span></label>
+                <input class="contact-form__input" type="password" id="confirm-password" name="confirm-password"
+                    required>
+                <button type="submit" class="button button--form">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/mobile-menu.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
